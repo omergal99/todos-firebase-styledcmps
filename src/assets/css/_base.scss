@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  font-family: sans-serif, Arial, serif;
+}
+
+body {
+  margin: 0;
+  font-size: 16px;
+  min-height: 100vh;
+  background-color: rgb(163, 161, 156);
+}
+
+.App {
+  text-align: center;
+  max-width: 100%;
+}
