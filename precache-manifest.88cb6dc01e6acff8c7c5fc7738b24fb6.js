@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "dca50cb9ed10c74a85710629e3fba81f",
+    "revision": "fef5506f631424007861f2dcfa7276ec",
     "url": "/todos-firebase-styledcmps/index.html"
   },
   {
-    "revision": "aa8194e004c97d7af47f",
+    "revision": "4ab708e7d936476426f3",
     "url": "/todos-firebase-styledcmps/static/css/main.943c3884.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/todos-firebase-styledcmps/static/js/2.09dc9653.chunk.js.LICENSE"
   },
   {
-    "revision": "aa8194e004c97d7af47f",
-    "url": "/todos-firebase-styledcmps/static/js/main.7cabd792.chunk.js"
+    "revision": "4ab708e7d936476426f3",
+    "url": "/todos-firebase-styledcmps/static/js/main.e3d37093.chunk.js"
   },
   {
     "revision": "6da4869ddf8350b9dff9",
