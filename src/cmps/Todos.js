@@ -1,15 +1,21 @@
 import React from 'react';
-import { useState, useCallback } from 'react';
+import { useCallback } from 'react';
 import styled from 'styled-components';
 
 import Input from '../common/Input';
 import TodoPreview from './TodoPreview';
 
+import { useTodos } from './todosHooks';
+// import { useState } from 'react';
+
 function Todos() {
 
-  const [todos, setTodos] = useState([
-    { id: '1', content: 'buy gift for my girl', isChecked: false }
-  ]);
+  const [todos, setTodos] = useTodos();
+
+  // const [todos, setTodos] = useState([
+  //   { id: '1', content: 'buy gift for my girl', isChecked: false },
+  //   { id: '2', content: 'lalala', isChecked: false }
+  // ]);
 
   const handleKeyUp = useCallback(ev => {
     if (ev.which !== 13) return;
@@ -22,14 +28,20 @@ function Todos() {
     setTodos(updateTodos);
   }, [setTodos, todos]);
 
+  const removeTodo = useCallback(todo => {
+    const updateTodos = todos.filter(to => to.id !== todo.id);
+    setTodos(updateTodos);
+  }, [setTodos, todos]);
+
   const todosList = todos.map(todo => {
-    return <TodoPreview key={todo.id} todo={todo} onClick={toggleChecked} />
+    return <TodoPreview key={todo.id} todo={todo}
+      onToggleChecked={toggleChecked} onRemoveTodo={removeTodo} />
   })
 
   return (
     <Container>
-      <Input onKeyUp={handleKeyUp} />
-      <ul className="clean-list">
+      <Input onKeyUp={handleKeyUp} placeholder={'Add New Todo . .'} />
+      <ul className="clean-list" style={{ overflow: 'auto', height: '100%' }} >
         {todosList}
       </ul>
     </Container>
@@ -39,6 +51,10 @@ function Todos() {
 export default Todos;
 
 const Container = styled.div`
+  height: 80vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
   width: 50%;
   margin: 2rem auto 0 auto;
 `;

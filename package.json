@@ -1,4 +1,5 @@
 {
+  "homepage": "http://omergal99.github.io/todos-firebase-styledcmps",
   "name": "todos-firebase-styledcmps",
   "version": "0.1.0",
   "private": true,
@@ -7,6 +8,7 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "firebase": "^7.6.2",
+    "gh-pages": "^2.2.0",
     "moment": "^2.24.0",
     "node-sass": "^4.13.0",
     "react": "^16.12.0",
@@ -18,7 +20,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
