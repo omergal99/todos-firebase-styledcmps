@@ -55,6 +55,12 @@ const Container = styled.div`
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 90%;
   margin: 2rem auto 0 auto;
+  @media (min-width: 500px) {
+    width: 70%;
+  }
+  @media (min-width: 1000px) {
+    width: 50%;
+  }
 `;
